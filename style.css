@@ -1,0 +1,308 @@
+/* =========================================================
+   1. COLORS (change these to restyle the whole site)
+   ========================================================= */
+:root {
+  --paper:  #f3f6f8;   /* page background */
+  --card:   #ffffff;   /* card background */
+  --ink:    #14213d;   /* main text */
+  --muted:  #51607a;   /* softer text */
+  --accent: #2d4ef5;   /* links and buttons (your one accent color) */
+  --line:   #d3dce6;   /* borders */
+  --grid:   #e2e9f0;   /* graph-paper lines in the hero */
+}
+
+/* Dark theme: applied when script.js sets data-theme="dark" */
+[data-theme="dark"] {
+  --paper:  #0e1524;
+  --card:   #151e32;
+  --ink:    #e8eef7;
+  --muted:  #9aa8c0;
+  --accent: #7c93ff;
+  --line:   #26324a;
+  --grid:   #18233b;
+}
+
+/* =========================================================
+   2. BASE STYLES
+   ========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+  line-height: 1.15;
+  margin: 0;
+}
+
+p {
+  max-width: 60ch;   /* keeps lines easy to read */
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* Shows a clear outline when someone uses the keyboard */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* A centered column that holds the content */
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* =========================================================
+   3. TOP BAR
+   ========================================================= */
+.topbar {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.topbar nav a {
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: 1.25rem;
+}
+
+.topbar nav a:hover {
+  color: var(--accent);
+}
+
+#theme-toggle {
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+/* =========================================================
+   4. HERO (the graph-paper background is the one special touch)
+   ========================================================= */
+.hero {
+  padding: 5rem 0 4rem;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 9vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.role {
+  font-family: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0.75rem 0 1rem;
+}
+
+.intro {
+  color: var(--muted);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  background: var(--paper);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+.btn-primary:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+/* =========================================================
+   5. SECTIONS
+   ========================================================= */
+section.wrap {
+  padding-top: 3.5rem;
+  padding-bottom: 0.5rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+/* =========================================================
+   6. PROJECT CARDS
+   ========================================================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.tags li {
+  font-size: 0.85rem;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+/* =========================================================
+   7. SKILLS
+   ========================================================= */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.5rem;
+}
+
+.skills h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+/* =========================================================
+   8. CONTACT AND FOOTER
+   ========================================================= */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.4rem;
+}
+
+footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* =========================================================
+   9. MOBILE
+   ========================================================= */
+@media (max-width: 600px) {
+  .hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .role {
+    font-size: 1.2rem;
+  }
+}
+
+/* Respect people who turn off animations in their system settings */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- EDIT: the text shown on the browser tab -->
+  <title>Your Name | BSIT Student Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name, a BSIT student looking for an OJT placement.">
+
+  <!-- Fonts from Google Fonts (needs internet; the page still works without them) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== TOP BAR ========== -->
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <nav aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <h1>Rislyn Jane Gonzaga</h1>
+      <p class="role">3rd Year BSIT Student | Aspiring Web Developer
+      </p>
+      <p class="intro">
+        I build small web projects. I love to explore and learn something new.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projects">See my projects</a>
+        <!-- EDIT: put your resume file (resume.pdf) in this same folder -->
+        <a class="btn" href="resume.pdf" download>Download resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="wrap">
+      <h2>About me</h2>
+      <!-- EDIT: write 3 to 4 sentences. Who you are, what you study, what you want to learn in OJT -->
+      <p>
+        I’m a third-year BSIT student at CTU-Ginatilan Extension Campus. I enjoy turning ideas
+        into working websites and I’m interested in web development and databases.
+      </p>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="wrap">
+      <h2>Projects</h2>
+      <div class="grid">
+
+        <!-- EDIT: one <article> per project. Copy and paste the whole block to add more -->
+        <article class="card">
+          <h3>Project name</h3>
+          <p>One or two sentences: what problem it solves and what you did.</p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <a href="https://github.com/yourusername/project-one">View on GitHub</a>
+        </article>
+
+        <article class="card">
+          <h3>Another project</h3>
+          <p>Could be a school system, a Figma prototype, or a small app.</p>
+          <ul class="tags">
+            <li>Figma</li>
+            <li>UI design</li>
+          </ul>
+          <a href="https://github.com/yourusername/project-two">View project</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="wrap">
+      <h2>Skills</h2>
+      <!-- EDIT: only list what you can actually do -->
+      <div class="skills">
+        <div>
+          <h3>Languages</h3>
+          <ul>
+            <li>HTML and CSS</li>
+            <li>JavaScript (basic)</li>
+            <li>Python</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul>
+            <li>VS Code</li>
+            <li>Git and GitHub</li>
+            <li>Figma</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Working style</h3>
+          <ul>
+            <li>Learns quickly</li>
+            <li>Good at documentation</li>
+            <li>Works well in a team</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="wrap">
+      <h2>Contact</h2>
+      <p>I’m open to OJT opportunities. The best way to reach me is by email.</p>
+      <ul class="contact-list">
+        <!-- EDIT: replace with your real links -->
+        <li><a href="mailto:gonzagarislyn@gmail.com">gonzagarislyn@gmail.com</a></li>
+        <li><a href="https://github.com/rislyn859">GitHub</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <!-- The year updates by itself (see script.js) -->
+      <p>&copy; <span id="year">2026</span> Your Name</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
